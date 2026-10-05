@@ -3,7 +3,7 @@
 **受付から商品のお渡しまでを、ひとつの画面で管理するスタッフ向けWebアプリです。**
 
 - **公開アプリ：[CAFE ORDERを開く](https://cafe-order-rg26n055.iisiu.chatgpt.site/)**
-- **ソースコード：[GitHub / cafe-order-app](https://github.com/rg26n055-gif/cafe-order-app)**
+- **ソースコード：[GitHub / cafe-order-app](https://github.com/shin-systems26/cafe-order-app)**
 
 Googleアカウントでログインして使います。ChatGPTのアカウントは不要です。アカウントごとに注文・在庫が分かれ、新しくログインした人は自分専用のデータで始められます。初期在庫は0なので、最初に「在庫」で販売可能数を設定してください。
 
@@ -11,7 +11,7 @@ Googleアカウントでログインして使います。ChatGPTのアカウン�
 
 使ってみた感想、操作に迷ったところ、改善案を募集しています。
 
-**[GitHub Discussionsで感想・改善案を送る](https://github.com/rg26n055-gif/cafe-order-app/discussions)**
+**[GitHub Discussionsで感想・改善案を送る](https://github.com/shin-systems26/cafe-order-app/discussions)**
 
 投稿にはGitHubアカウントが必要です。次のうち、書ける項目だけで構いません。
 
@@ -189,3 +189,13 @@ npm run build
 本リポジトリは、すべてのコードを手作業で書いたことや、記載した技術をすべて習得済みであることを示すものではありません。要件の整理とAIを使った開発の成果として公開し、実装を読みながら理解を深めるためにも活用します。
 
 
+
+## GitHubユーザー名変更後の公開先とログイン設定
+
+- アプリ本体: https://cafe-order-rg26n055.iisiu.chatgpt.site/
+- GitHub Pagesの説明ページ: https://shin-systems26.github.io/cafe-order-app/
+- Sitesのホスト名はGitHubユーザー名とは独立しています。上記の稼働中URLは変更不要です。
+- Firebaseプロジェクト: `cafe-order-48b34`
+- Authentication → Settings → Authorized domains の必要な本番ドメインは `cafe-order-rg26n055.iisiu.chatgpt.site` です。2026-10-05の確認時点では登録済みです。
+- Pagesは説明ページでありログイン処理を実行しないため、この構成では `shin-systems26.github.io` の追加は不要です。
+- `authDomain` は `cafe-order-48b34.firebaseapp.com` を維持します。実際にアプリの公開先を変える場合は、その新しいホスト名を承認済みドメインに追加してください。
